@@ -2,6 +2,7 @@ package cup.example;
 import java_cup.runtime.ComplexSymbolFactory;
 import java_cup.runtime.ComplexSymbolFactory.Location;
 import java_cup.runtime.Symbol;
+import java_cup.runtime.*;
 import java.lang.*;
 import java.io.InputStreamReader;
 
@@ -12,6 +13,7 @@ import java.io.InputStreamReader;
 %public
 %unicode
 %line
+%ignorecase
 %column
 %cup
 %char
@@ -292,8 +294,6 @@ ident = ([:jletter:] | "_" ) ([:jletterdigit:] | [:jletter:] | "_" )*
 	"colspan" { return symbolFactory.newSymbol("COLSPAN", COLSPAN); }
 	{String}		{ return symbolFactory.newSymbol("STRING", STRING, yytext()); }
 }
-
-
 
 // error fallback
 .|\n          { emit_warning("Unrecognized character '" +yytext()+"' -- ignored"); }

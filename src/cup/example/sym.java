@@ -8,16 +8,220 @@ package cup.example;
 /** CUP generated interface containing symbol constants. */
 public interface sym {
   /* terminals */
-  public static final int MINUS = 4;
-  public static final int UMINUS = 5;
-  public static final int NUMBER = 9;
-  public static final int SEMI = 2;
-  public static final int EOF = 0;
-  public static final int PLUS = 3;
-  public static final int error = 1;
+  public static final int TH = 198;
+  public static final int MIDDLE = 188;
+  public static final int TD = 199;
+  public static final int ALIGN = 181;
+  public static final int BELOW = 169;
+  public static final int H6 = 80;
+  public static final int HEAD = 97;
+  public static final int TITLE = 24;
+  public static final int H5 = 79;
+  public static final int ONMOUSEMOVE = 32;
+  public static final int H4 = 78;
+  public static final int H3 = 77;
+  public static final int OPTGROUP = 162;
+  public static final int H2 = 76;
+  public static final int H1 = 75;
+  public static final int SUMMARY = 200;
+  public static final int OPEN_CLOSING_TAG = 11;
+  public static final int CIRCLE = 18;
+  public static final int NOSCRIPT = 73;
+  public static final int VALUE = 130;
+  public static final int HREF = 104;
   public static final int RPAREN = 8;
+  public static final int OPEN_TAG = 9;
+  public static final int FORM = 95;
+  public static final int ONRESET = 142;
+  public static final int ARCHIVE = 125;
   public static final int TIMES = 6;
+  public static final int BORDER = 175;
+  public static final int VSIDES = 173;
+  public static final int HTTPEQUIV = 105;
+  public static final int ONCLICK = 28;
+  public static final int CAPTION = 191;
+  public static final int BASELINE = 190;
+  public static final int PUBLIC = 16;
+  public static final int DOCTYPE = 15;
+  public static final int STYLE = 23;
+  public static final int AXIS = 207;
+  public static final int STANDBY = 126;
+  public static final int VALIGN = 186;
+  public static final int ACCESSKEY = 37;
+  public static final int UMINUS = 5;
+  public static final int NONE = 176;
+  public static final int CHECKED = 154;
+  public static final int CLOSE_TAG = 10;
+  public static final int CENTER = 183;
+  public static final int RHS = 172;
+  public static final int OPTION = 163;
+  public static final int EM = 52;
+  public static final int RADIO = 149;
+  public static final int TYPE = 111;
+  public static final int SCOPE = 209;
+  public static final int COLSPAN = 211;
+  public static final int DIV = 92;
+  public static final int DIR = 27;
+  public static final int LHS = 171;
+  public static final int LABEL = 68;
+  public static final int DT = 85;
+  public static final int ROWS = 164;
+  public static final int EOF = 0;
+  public static final int COL = 196;
+  public static final int KBD = 58;
+  public static final int MINUS = 4;
+  public static final int DL = 84;
+  public static final int BIG = 50;
+  public static final int INS = 70;
+  public static final int BASE = 102;
+  public static final int BLOCKQUOTE = 89;
+  public static final int PARAM = 119;
+  public static final int DD = 86;
+  public static final int MAP = 44;
+  public static final int VOID = 167;
+  public static final int TEXTAREA = 67;
+  public static final int METHOD = 139;
+  public static final int BODY = 98;
+  public static final int THEAD = 192;
+  public static final int ACTION = 138;
+  public static final int HIDDEN = 153;
+  public static final int SIZE = 157;
+  public static final int ONKEYPRESS = 34;
+  public static final int SUBMIT = 150;
+  public static final int COLGROUP = 195;
+  public static final int CITE = 60;
+  public static final int GROUPS = 177;
+  public static final int SCRIPT = 72;
+  public static final int CHAR = 179;
+  public static final int NUMBER = 212;
+  public static final int NAME = 106;
+  public static final int HTML = 96;
+  public static final int XML_LANG = 26;
+  public static final int ONSUBMIT = 141;
+  public static final int OL = 82;
+  public static final int ONCHANGE = 160;
+  public static final int IMG = 46;
+  public static final int CLASSID = 121;
+  public static final int CHECKBOX = 148;
+  public static final int CONTENT = 107;
+  public static final int SEMI = 2;
+  public static final int REV = 113;
+  public static final int CHAROFF = 180;
+  public static final int BR = 41;
+  public static final int PASSWORD = 147;
+  public static final int SHAPE = 117;
+  public static final int CHARSET = 109;
+  public static final int PRE = 87;
+  public static final int SAMP = 57;
+  public static final int LEFT = 182;
+  public static final int TABLE = 94;
+  public static final int REL = 112;
+  public static final int FIELDSET = 93;
+  public static final int INPUT = 65;
+  public static final int CELLPADDING = 204;
+  public static final int RIGHT = 184;
+  public static final int ONKEYDOWN = 35;
+  public static final int DFN = 54;
+  public static final int ONFOCUS = 39;
+  public static final int FRAME = 201;
+  public static final int ATTR_ASSIGN = 12;
+  public static final int ALT = 133;
+  public static final int SCHEME = 108;
+  public static final int MEDIA = 114;
+  public static final int PLUS = 3;
+  public static final int CLASS = 22;
   public static final int LPAREN = 7;
+  public static final int MAXLENGTH = 158;
+  public static final int ALL = 178;
+  public static final int AREA = 136;
+  public static final int META = 100;
+  public static final int VALUETYPE = 131;
+  public static final int DEL = 71;
+  public static final int HSIDES = 170;
+  public static final int ACCEPT_CHARSET = 144;
+  public static final int ACCEPT = 143;
+  public static final int SELECT = 66;
+  public static final int ABOVE = 168;
+  public static final int HEADERS = 208;
+  public static final int CODE = 55;
+  public static final int OPEN_SYMBOL = 14;
+  public static final int ONDBLCLICK = 29;
+  public static final int BOTTOM = 189;
+  public static final int ROW = 205;
+  public static final int TOP = 187;
+  public static final int ADDRESS = 90;
+  public static final int ONSELECT = 159;
+  public static final int TFOOT = 193;
+  public static final int XMLNS = 99;
+  public static final int ONMOUSEUP = 31;
+  public static final int SUP = 64;
+  public static final int TBODY = 194;
+  public static final int LI = 83;
+  public static final int FILE = 152;
+  public static final int DATA = 123;
+  public static final int WIDTH = 128;
+  public static final int BDO = 43;
+  public static final int SUB = 63;
+  public static final int COORDS = 118;
+  public static final int PROFILE = 103;
+  public static final int ACRONYM = 62;
+  public static final int DISABLED = 155;
+  public static final int HREFLANG = 110;
+  public static final int ISMAP = 135;
+  public static final int TEXT = 146;
+  public static final int CODETYPE = 124;
+  public static final int POLY = 19;
+  public static final int STRONG = 53;
+  public static final int VAR = 59;
+  public static final int ROWGROUP = 206;
+  public static final int TABINDEX = 38;
+  public static final int FOR = 145;
+  public static final int ONKEYUP = 36;
+  public static final int USEMAP = 129;
+  public static final int READONLY = 156;
+  public static final int RESET = 151;
+  public static final int ONMOUSEOUT = 33;
+  public static final int BOX = 174;
+  public static final int HEIGHT = 127;
+  public static final int STRING = 213;
+  public static final int Q = 56;
+  public static final int DATETIME = 116;
+  public static final int SPAN = 42;
+  public static final int P = 91;
+  public static final int LINK = 101;
+  public static final int RULES = 202;
+  public static final int CODEBASE = 122;
+  public static final int I = 48;
+  public static final int XML_SPACE = 115;
+  public static final int ROWSPAN = 210;
+  public static final int B = 49;
+  public static final int A = 74;
+  public static final int SMALL = 51;
+  public static final int ONBLUR = 40;
+  public static final int LEGEND = 166;
+  public static final int QUATATION_MARKS = 13;
+  public static final int LONGDESC = 134;
+  public static final int LANG = 25;
+  public static final int NOHREF = 137;
+  public static final int DECLARE = 120;
+  public static final int error = 1;
+  public static final int ENCTYPE = 140;
+  public static final int ID = 21;
+  public static final int UL = 81;
+  public static final int DEFAULT = 20;
+  public static final int ABBR = 61;
+  public static final int COLS = 165;
+  public static final int MULTIPLE = 161;
+  public static final int SRC = 132;
+  public static final int BUTTON = 69;
+  public static final int CELLSPACING = 203;
+  public static final int HR = 88;
+  public static final int ONMOUSEDOWN = 30;
+  public static final int TT = 47;
+  public static final int TR = 197;
+  public static final int OBJECT = 45;
+  public static final int RECT = 17;
+  public static final int JUSTIFY = 185;
   public static final String[] terminalNames = new String[] {
   "EOF",
   "error",
@@ -28,7 +232,211 @@ public interface sym {
   "TIMES",
   "LPAREN",
   "RPAREN",
-  "NUMBER"
+  "OPEN_TAG",
+  "CLOSE_TAG",
+  "OPEN_CLOSING_TAG",
+  "ATTR_ASSIGN",
+  "QUATATION_MARKS",
+  "OPEN_SYMBOL",
+  "DOCTYPE",
+  "PUBLIC",
+  "RECT",
+  "CIRCLE",
+  "POLY",
+  "DEFAULT",
+  "ID",
+  "CLASS",
+  "STYLE",
+  "TITLE",
+  "LANG",
+  "XML_LANG",
+  "DIR",
+  "ONCLICK",
+  "ONDBLCLICK",
+  "ONMOUSEDOWN",
+  "ONMOUSEUP",
+  "ONMOUSEMOVE",
+  "ONMOUSEOUT",
+  "ONKEYPRESS",
+  "ONKEYDOWN",
+  "ONKEYUP",
+  "ACCESSKEY",
+  "TABINDEX",
+  "ONFOCUS",
+  "ONBLUR",
+  "BR",
+  "SPAN",
+  "BDO",
+  "MAP",
+  "OBJECT",
+  "IMG",
+  "TT",
+  "I",
+  "B",
+  "BIG",
+  "SMALL",
+  "EM",
+  "STRONG",
+  "DFN",
+  "CODE",
+  "Q",
+  "SAMP",
+  "KBD",
+  "VAR",
+  "CITE",
+  "ABBR",
+  "ACRONYM",
+  "SUB",
+  "SUP",
+  "INPUT",
+  "SELECT",
+  "TEXTAREA",
+  "LABEL",
+  "BUTTON",
+  "INS",
+  "DEL",
+  "SCRIPT",
+  "NOSCRIPT",
+  "A",
+  "H1",
+  "H2",
+  "H3",
+  "H4",
+  "H5",
+  "H6",
+  "UL",
+  "OL",
+  "LI",
+  "DL",
+  "DT",
+  "DD",
+  "PRE",
+  "HR",
+  "BLOCKQUOTE",
+  "ADDRESS",
+  "P",
+  "DIV",
+  "FIELDSET",
+  "TABLE",
+  "FORM",
+  "HTML",
+  "HEAD",
+  "BODY",
+  "XMLNS",
+  "META",
+  "LINK",
+  "BASE",
+  "PROFILE",
+  "HREF",
+  "HTTPEQUIV",
+  "NAME",
+  "CONTENT",
+  "SCHEME",
+  "CHARSET",
+  "HREFLANG",
+  "TYPE",
+  "REL",
+  "REV",
+  "MEDIA",
+  "XML_SPACE",
+  "DATETIME",
+  "SHAPE",
+  "COORDS",
+  "PARAM",
+  "DECLARE",
+  "CLASSID",
+  "CODEBASE",
+  "DATA",
+  "CODETYPE",
+  "ARCHIVE",
+  "STANDBY",
+  "HEIGHT",
+  "WIDTH",
+  "USEMAP",
+  "VALUE",
+  "VALUETYPE",
+  "SRC",
+  "ALT",
+  "LONGDESC",
+  "ISMAP",
+  "AREA",
+  "NOHREF",
+  "ACTION",
+  "METHOD",
+  "ENCTYPE",
+  "ONSUBMIT",
+  "ONRESET",
+  "ACCEPT",
+  "ACCEPT_CHARSET",
+  "FOR",
+  "TEXT",
+  "PASSWORD",
+  "CHECKBOX",
+  "RADIO",
+  "SUBMIT",
+  "RESET",
+  "FILE",
+  "HIDDEN",
+  "CHECKED",
+  "DISABLED",
+  "READONLY",
+  "SIZE",
+  "MAXLENGTH",
+  "ONSELECT",
+  "ONCHANGE",
+  "MULTIPLE",
+  "OPTGROUP",
+  "OPTION",
+  "ROWS",
+  "COLS",
+  "LEGEND",
+  "VOID",
+  "ABOVE",
+  "BELOW",
+  "HSIDES",
+  "LHS",
+  "RHS",
+  "VSIDES",
+  "BOX",
+  "BORDER",
+  "NONE",
+  "GROUPS",
+  "ALL",
+  "CHAR",
+  "CHAROFF",
+  "ALIGN",
+  "LEFT",
+  "CENTER",
+  "RIGHT",
+  "JUSTIFY",
+  "VALIGN",
+  "TOP",
+  "MIDDLE",
+  "BOTTOM",
+  "BASELINE",
+  "CAPTION",
+  "THEAD",
+  "TFOOT",
+  "TBODY",
+  "COLGROUP",
+  "COL",
+  "TR",
+  "TH",
+  "TD",
+  "SUMMARY",
+  "FRAME",
+  "RULES",
+  "CELLSPACING",
+  "CELLPADDING",
+  "ROW",
+  "ROWGROUP",
+  "AXIS",
+  "HEADERS",
+  "SCOPE",
+  "ROWSPAN",
+  "COLSPAN",
+  "NUMBER",
+  "STRING"
   };
 }
 
