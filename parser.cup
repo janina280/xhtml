@@ -10,11 +10,11 @@ import cup.example.Lexer;
 import java.io.IOException;
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.List;
 
 parser code {:
   protected Lexer lexer;
 :}
-
 /* define how to connect to the scanner! */
 init with {:
   ComplexSymbolFactory f = new ComplexSymbolFactory();
@@ -30,10 +30,8 @@ init with {:
 :};
 scan with {: return lexer.next_token(); :};
 
-/* Terminals (tokens returned by the scanner). */
-terminal            SEMI, PLUS, MINUS, UMINUS, TIMES, LPAREN, RPAREN;
 terminal		OPEN_TAG, CLOSE_TAG, OPEN_CLOSING_TAG, ATTR_ASSIGN, QUATATION_MARKS, OPEN_SYMBOL,
-		DOCTYPE, PUBLIC, RECT, CIRCLE, POLY, DEFAULT, ID, CLASS, STYLE, TITLE, LANG,
+		DOCTYPE, RECT, CIRCLE, POLY, DEFAULT, ID, CLASS, STYLE, LANG, TITLE, PUBLIC,
 		XML_LANG, DIR, ONCLICK, ONDBLCLICK, ONMOUSEDOWN, ONMOUSEUP, ONMOUSEMOVE, ONMOUSEOUT,
 		ONKEYPRESS, ONKEYDOWN, ONKEYUP, ACCESSKEY, TABINDEX, ONFOCUS, ONBLUR, BR, SPAN, BDO,
 		MAP, OBJECT, IMG, TT, I, B, BIG, SMALL, EM, STRONG, DFN, CODE, Q, SAMP, KBD, VAR, CITE,
@@ -51,19 +49,21 @@ terminal		OPEN_TAG, CLOSE_TAG, OPEN_CLOSING_TAG, ATTR_ASSIGN, QUATATION_MARKS, O
 		MIDDLE, BOTTOM, BASELINE, CAPTION, THEAD, TFOOT, TBODY, COLGROUP, COL, TR, TH, TD,
 		SUMMARY, FRAME, RULES, CELLSPACING, CELLPADDING, ROW, ROWGROUP, AXIS, HEADERS,
 		SCOPE, ROWSPAN, COLSPAN;
-terminal Integer    NUMBER;        // our scanner provides numbers as integers
-terminal String STRING;//e key sensitive proiectul nostru
+/* Terminals (tokens returned by the scanner). */
+terminal            SEMI, PLUS, MINUS, UMINUS, TIMES, LPAREN, RPAREN;
+terminal Integer	NUMBER;        // our scanner provides numbers as integers
+terminal String  	STRING; 
 
 /* Non terminals */
 non terminal            expr_list;
-non terminal Integer    expr;      // used to store evaluated subexpressions
+non terminal Integer    expr;
 
 /* Precedences */
 precedence left PLUS, MINUS;
 precedence left TIMES;
 precedence left UMINUS;
-
-/* The grammar rules */
+				
+				/* The grammar rules */
 expr_list ::= expr_list expr:e SEMI         {: System.out.println(e); :}
             | expr:e SEMI                   {: System.out.println(e); :}
             ;
@@ -76,5 +76,3 @@ expr      ::= expr:e1 PLUS  expr:e2         {: RESULT = e1+e2;        :}
              | LPAREN expr:e RPAREN	         {: RESULT = e;           :}
              | NUMBER:n	                     {: RESULT = n;           :}
              ;
-             
-       

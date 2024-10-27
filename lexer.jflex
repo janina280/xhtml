@@ -2,7 +2,6 @@ package cup.example;
 import java_cup.runtime.ComplexSymbolFactory;
 import java_cup.runtime.ComplexSymbolFactory.Location;
 import java_cup.runtime.Symbol;
-import java_cup.runtime.*;
 import java.lang.*;
 import java.io.InputStreamReader;
 
@@ -12,8 +11,8 @@ import java.io.InputStreamReader;
 %implements sym
 %public
 %unicode
-%line
 %ignorecase
+%line
 %column
 %cup
 %char
@@ -59,14 +58,15 @@ import java.io.InputStreamReader;
 Newline    = \r | \n | \r\n
 Whitespace = [ \t\f] | {Newline}
 Number     = [0-9]+
+String     = [A-Za-z0-9./:!]*
 
 /* comments */
 Comment = {TraditionalComment} | {EndOfLineComment}
-TraditionalComment = "/*" {CommentContent} \*+ "/"
+TraditionalComment = "/" {CommentContent} \+ "/"
 EndOfLineComment = "//" [^\r\n]* {Newline}
-CommentContent = ( [^*] | \*+[^*/] )*
+CommentContent = ( [^] | \+[^/] )
 
-ident = ([:jletter:] | "_" ) ([:jletterdigit:] | [:jletter:] | "_" )*
+ident = ([:jletter:] | "" ) ([:jletterdigit:] | [:jletter:] | "" )*
 
 
 %eofval{
@@ -78,9 +78,7 @@ ident = ([:jletter:] | "_" ) ([:jletterdigit:] | [:jletter:] | "_" )*
 %%  
 
 <YYINITIAL> {
-
-  {Whitespace} {                              }
-  ";"          { return symbolFactory.newSymbol("SEMI", SEMI); }
+   {Whitespace} {                              }
   "+"          { return symbolFactory.newSymbol("PLUS", PLUS); }
   "-"          { return symbolFactory.newSymbol("MINUS", MINUS); }
   "*"          { return symbolFactory.newSymbol("TIMES", TIMES); }
@@ -88,7 +86,7 @@ ident = ([:jletter:] | "_" ) ([:jletterdigit:] | [:jletter:] | "_" )*
   "("          { return symbolFactory.newSymbol("LPAREN", LPAREN); }
   ")"          { return symbolFactory.newSymbol("RPAREN", RPAREN); }
   {Number}     { return symbolFactory.newSymbol("NUMBER", NUMBER, Integer.parseInt(yytext())); }
-  "<"			{ return symbolFactory.newSymbol("OPEN_TAG", OPEN_TAG);}
+  	"<"			{ return symbolFactory.newSymbol("OPEN_TAG", OPEN_TAG);}
   	"</"			{ return symbolFactory.newSymbol("OPEN_CLOSING_TAG", OPEN_CLOSING_TAG);}
   	">"			{ return symbolFactory.newSymbol("CLOSE_TAG", CLOSE_TAG);}
   	"="			{ return symbolFactory.newSymbol("ATTR_ASSIGN", ATTR_ASSIGN);}
@@ -294,6 +292,8 @@ ident = ([:jletter:] | "_" ) ([:jletterdigit:] | [:jletter:] | "_" )*
 	"colspan" { return symbolFactory.newSymbol("COLSPAN", COLSPAN); }
 	{String}		{ return symbolFactory.newSymbol("STRING", STRING, yytext()); }
 }
+
+
 
 // error fallback
 .|\n          { emit_warning("Unrecognized character '" +yytext()+"' -- ignored"); }

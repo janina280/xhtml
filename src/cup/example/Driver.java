@@ -3,7 +3,6 @@ package cup.example;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-
 import java_cup.runtime.*;
 
 class Driver {
@@ -23,7 +22,7 @@ class Driver {
 		  Lexer lexer = new Lexer(f,fis);
 		  Symbol currentSymbol;
 		  while((currentSymbol=lexer.next_token()).sym!=sym.EOF)
-		  { System.out.println("currentSymbol : "+ currentSymbol);}//afisezi 
+		  { System.out.println("currentSymbol : "+ currentSymbol);}
 	}
 	
 }
