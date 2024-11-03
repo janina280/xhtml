@@ -193,12 +193,12 @@ tag_element_list ::= tag_open_element:toe tag_element_list:tel1 tag_close_elemen
 					;
 
 tag_inner_text ::=	STRING:s 	{: 
-				System.out.println("String Text"); 
-				RESULT = Node.createNode("Text");
+				System.out.println("String " + s); 
+				RESULT = Node.createNode(s);
 				:}
 				|	NUMBER:n 	{: 
-				System.out.println("Number Text");
-				RESULT = Node.createNode("Text");
+				System.out.println("Number " + Integer.toString(n));
+				RESULT = Node.createNode(Integer.toString(n));
 				:}
 				;
 
@@ -731,10 +731,10 @@ attribute ::=	attribute_name:an ATTR_ASSIGN QUATATION_MARKS attribute_content:ac
 			;
 			
 attribute_content ::= STRING:s	{: System.out.println("attribute_content string"); 
-					RESULT = Node.createNode("Text"); 
+					RESULT = Node.createNode(s); 
 					RESULT.setShouldBeDisplayed(false);:}
 					| NUMBER:n	{: System.out.println("attribute_content number");  
-					RESULT = Node.createNode("Text"); 
+					RESULT = Node.createNode(Integer.toString(n)); 
 					RESULT.setShouldBeDisplayed(false);:}
 					;
 

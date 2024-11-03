@@ -1551,8 +1551,8 @@ class CUP$Parser$actions {
 		String s = (String)((java_cup.runtime.Symbol) CUP$Parser$stack.peek()).value;
 		//@@CUPDBG20
  
-				System.out.println("String Text"); 
-				RESULT = Node.createNode("Text");
+				System.out.println("String " + s); 
+				RESULT = Node.createNode(s);
 				
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_inner_text",19, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -1567,8 +1567,8 @@ class CUP$Parser$actions {
 		Integer n = (Integer)((java_cup.runtime.Symbol) CUP$Parser$stack.peek()).value;
 		//@@CUPDBG21
  
-				System.out.println("Number Text");
-				RESULT = Node.createNode("Text");
+				System.out.println("Number " + Integer.toString(n));
+				RESULT = Node.createNode(Integer.toString(n));
 				
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("tag_inner_text",19, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3635,7 +3635,7 @@ class CUP$Parser$actions {
 		String s = (String)((java_cup.runtime.Symbol) CUP$Parser$stack.peek()).value;
 		//@@CUPDBG190
  System.out.println("attribute_content string"); 
-					RESULT = Node.createNode("Text"); 
+					RESULT = Node.createNode(s); 
 					RESULT.setShouldBeDisplayed(false);
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_content",13, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }
@@ -3650,7 +3650,7 @@ class CUP$Parser$actions {
 		Integer n = (Integer)((java_cup.runtime.Symbol) CUP$Parser$stack.peek()).value;
 		//@@CUPDBG191
  System.out.println("attribute_content number");  
-					RESULT = Node.createNode("Text"); 
+					RESULT = Node.createNode(Integer.toString(n)); 
 					RESULT.setShouldBeDisplayed(false);
               CUP$Parser$result = parser.getSymbolFactory().newSymbol("attribute_content",13, ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), ((java_cup.runtime.Symbol)CUP$Parser$stack.peek()), RESULT);
             }

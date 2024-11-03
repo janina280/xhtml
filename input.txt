@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Page Title</title>
+    <title>Title</title>
 </head>
 <body>
-
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
+    <h1 style="gray">
+        Test
+    </h1>
+    <p id="1">
+        Text
+    </p>
+    <div class="test">Hello, <span> Didi! </span></div>
 </body>
 </html>
