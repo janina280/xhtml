@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 %implements sym
 %public
 %unicode
-%ignorecase
+
 %line
 %column
 %cup
@@ -81,7 +81,7 @@ ident = ([:jletter:] | "" ) ([:jletterdigit:] | [:jletter:] | "" )*
    {Whitespace} {                              }
   "+"          { return symbolFactory.newSymbol("PLUS", PLUS); }
   "-"          { return symbolFactory.newSymbol("MINUS", MINUS); }
-  "*"          { return symbolFactory.newSymbol("TIMES", TIMES); }
+  "*"          { return symbolFactory.newSymbol("TIMES", TIMES); } 
   "n"          { return symbolFactory.newSymbol("UMINUS", UMINUS); }
   "("          { return symbolFactory.newSymbol("LPAREN", LPAREN); }
   ")"          { return symbolFactory.newSymbol("RPAREN", RPAREN); }
